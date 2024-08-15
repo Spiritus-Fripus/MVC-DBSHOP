@@ -3,9 +3,9 @@ require '../config/MySQLConnector.php';
 
 class ProductManager
 {
-    private $db;
-    private $nbPerPage = 50;
-    private $page = 1;
+    private PDO $db;
+    private int $nbPerPage = 50;
+    private int $page = 1;
     private $searchTerm;
 
     public function __construct()
@@ -19,8 +19,7 @@ class ProductManager
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
         $row = $stmt->fetch();
-        $total = $row['total'];
-        return $total;
+        return $row['total'];
     }
 
     public function getAllProducts()
@@ -33,8 +32,7 @@ class ProductManager
             $stmt->bindValue(':offset', ($this->page - 1) * $this->nbPerPage, PDO::PARAM_INT);
             $stmt->bindValue(':limit', $this->nbPerPage, PDO::PARAM_INT);
             $stmt->execute();
-            $recordset = $stmt->fetchAll();
-            return $recordset;
+            return $stmt->fetchAll();
         }
     }
 
@@ -47,14 +45,14 @@ class ProductManager
             $stmt = $this->db->prepare($sql);
             $stmt->bindValue(':search', $search);
             $stmt->execute();
-            $recordset = $stmt->fetchAll();
-            return $recordset;
+            return $stmt->fetchAll();
         }
     }
+
     /**
      * Get the value of nbPerPage
      */
-    public function getNbPerPage()
+    public function getNbPerPage(): int
     {
         return $this->nbPerPage;
     }
@@ -72,7 +70,7 @@ class ProductManager
     /**
      * Get the value of page
      */
-    public function getPage()
+    public function getPage(): int
     {
         return $this->page;
     }

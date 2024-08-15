@@ -1,6 +1,6 @@
 <h2 class="text-center mt-5">Admin login</h2>
 <div class="d-flex justify-content-center">
-    <form action="../views/security/login.html.php" method="POST">
+    <form action="?controller=security&action=login" method="POST">
         <div class="form-group mt-2">
             <label class="form-label" for="login">login</label>
             <input class="form-control" type="text" name="login" placeholder="ex : username">

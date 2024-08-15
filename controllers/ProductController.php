@@ -1,14 +1,16 @@
 <?php
 
-require '../core/Controller.php';
+require "../controllers/PrivateController.php";
 require '../models/ProductManager.php';
 
-class ProductController extends Controller
+
+class ProductController extends PrivateController
 {
     private ProductManager $productManager;
 
     public function __construct()
     {
+        parent::__construct();
         $this->productManager = new ProductManager();
     }
 

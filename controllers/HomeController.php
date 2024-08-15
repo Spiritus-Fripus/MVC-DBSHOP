@@ -1,9 +1,10 @@
 <?php
 
-require '../core/Controller.php';
+require '../controllers/PrivateController.php';
 
-class HomeController extends Controller
+class HomeController extends PrivateController
 {
+
     /**
      * Fonction d'action par défaut du controller "home"
      */

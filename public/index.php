@@ -6,7 +6,7 @@ if (!empty($_GET['controller'])) {
 
     $controllerName = $_GET['controller'];
 } else {
-    $controllerName = 'home';
+    $controllerName = 'security';
 }
 
 $controllerClassName = ucfirst($controllerName) . 'Controller';
@@ -23,7 +23,7 @@ if (file_exists('../controllers/' . $controllerClassName . '.php')) {
         $action = $_GET['action'];
     } else {
 
-        $action = 'index'; // Action par défault du contrôleur
+        $action = 'login'; // Action par défault du contrôleur
     }
     if (method_exists($controller, $action)) {
 

@@ -7,9 +7,12 @@ abstract class PrivateController extends Controller
 
     public function __construct()
     {
-        if (empty($_SESSION['user'])) {
-            header('location : /?controller=security&action=login');
+        session_start();
+
+        if (empty($_SESSION['user_connected']) || $_SESSION['user_connected'] !== 'ok') {
+            header('Location: /?controller=security&action=login');
             exit();
         }
+
     }
 }

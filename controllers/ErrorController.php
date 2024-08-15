@@ -1,4 +1,5 @@
 <?php
+
 class ErrorController
 {
 
@@ -9,4 +10,5 @@ class ErrorController
         $template = '../views/error/not-found.html.php';
         require '../views/layout.html.php';
     }
+
 }
