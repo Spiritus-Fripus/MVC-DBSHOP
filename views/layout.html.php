@@ -1,4 +1,9 @@
-<?php /** @var string $bodyContent */ ?>
+<?php
+/**
+ * DOC VARIABLE
+ * @var string $bodyContent
+ */
+?>
 <!doctype html>
 <html lang="en">
 

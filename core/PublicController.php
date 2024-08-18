@@ -5,10 +5,9 @@ require '../core/View.php';
 abstract class PublicController
 {
     /**
-     * Permet d'afficher le rendu d'une View
-     *
+     * DOC VARIABLE
      * @param string $template
-     * @param string $data
+     * @param array $data
      * @return void
      */
 
