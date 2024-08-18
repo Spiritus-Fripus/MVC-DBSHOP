@@ -24,7 +24,7 @@ class View
         require '../views/layout.html.php';
     }
 
-    // fonction récursive pour appliquer htmlspecialchars()
+    // fonction récursive pour appliquer htmlspecialchars
     private function cleanData(array $data)
     {
         return array_map(function ($value) {

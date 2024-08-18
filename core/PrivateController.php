@@ -1,8 +1,8 @@
 <?php
 
-require '../core/Controller.php';
+require '../core/PublicController.php';
 
-abstract class PrivateController extends Controller
+abstract class PrivateController extends PublicController
 {
 
     public function __construct()
@@ -13,6 +13,5 @@ abstract class PrivateController extends Controller
             header('Location: /?controller=security&action=login');
             exit();
         }
-
     }
 }

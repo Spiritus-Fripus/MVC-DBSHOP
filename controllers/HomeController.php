@@ -1,6 +1,6 @@
 <?php
 
-require '../controllers/PrivateController.php';
+require '../core/PrivateController.php';
 
 class HomeController extends PrivateController
 {

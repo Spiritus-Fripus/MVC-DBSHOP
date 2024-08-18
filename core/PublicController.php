@@ -2,7 +2,7 @@
 
 require '../core/View.php';
 
-abstract class Controller
+abstract class PublicController
 {
     /**
      * Permet d'afficher le rendu d'une View

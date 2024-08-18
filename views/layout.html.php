@@ -20,7 +20,9 @@
         <a class="navbar-brand" href="?controller=home&action=index">INDEX</a>
         <a class="navbar-brand" href="?controller=product&action=index&p=1">PRODUCT</a>
         <a class="navbar-brand" href="?controller=security&action=login">LOGIN</a>
-        <a class="navbar-brand" href="?controller=security&action=logout">LOGOUT</a>
+        <?php if (!empty($_SESSION['user_connected'])) { ?>
+            <a class="navbar-brand" href="?controller=security&action=logout">LOGOUT</a>
+        <?php } ?>
     </nav>
 </header>
 <main>

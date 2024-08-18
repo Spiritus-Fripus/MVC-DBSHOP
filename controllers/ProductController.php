@@ -1,6 +1,6 @@
 <?php
 
-require "../controllers/PrivateController.php";
+require "../core/PrivateController.php";
 require '../models/ProductManager.php';
 
 

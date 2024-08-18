@@ -1,9 +1,9 @@
 <?php
 
-require '../core/Controller.php';
+require '../core/PublicController.php';
 require '../models/SecurityManager.php';
 
-class SecurityController extends Controller
+class SecurityController extends PublicController
 {
     private SecurityManager $securityManager;
 
@@ -25,11 +25,11 @@ class SecurityController extends Controller
                     exit();
                 } else {
                     echo "Login ou mot de passe incorrecte";
-                    $this->render('security/login.html.php');
+                    $this->render('login/login.html.php');
                 }
             }
         } else {
-            $this->render('security/login.html.php');
+            $this->render('login/login.html.php');
         }
     }
 
